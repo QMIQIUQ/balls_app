@@ -3,18 +3,27 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
+  runApp(Home());
+
+}
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.blue,
         appBar: AppBar(
           title: Center(child: Text('The Answer Ball')),
           backgroundColor: Colors.blueGrey,
         ),
-      body: BallPage(),
-    ),
-  ),);
+        body: BallPage(),
+      ),
+    );
+  }
 }
+
 
 class BallPage extends StatefulWidget {
   const BallPage({Key? key}) : super(key: key);
